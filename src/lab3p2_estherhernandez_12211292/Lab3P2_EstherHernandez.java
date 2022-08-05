@@ -45,6 +45,7 @@ public class Lab3P2_EstherHernandez {
                     System.out.println("");
                     System.out.println("1.Agregar personas");
                     System.out.println("2.Eliminar personas");
+                    System.out.println("3.Listar personas");
                     int op5= lea.nextInt();
                     while((op5 <1)||(op5>3)){
                         System.out.println("Opcion no valida ingrese de nuevo:");
@@ -64,7 +65,16 @@ public class Lab3P2_EstherHernandez {
                         System.out.println("Ingrese la posicion de la persona que desea eliminar:");
                         int pper = lea.nextInt();
                         ((cohetes)cohetes.get(pc)).getPersonas().remove(pper);
-                        System.out.println("Persona eliminada exitosamente");
+                        System.out.println("Persona eliminada del sistema exitosamente");
+                    }
+                    if (op5 ==3) {
+                      int per=  ((cohetes)cohetes.get(pc)).getPersonas().size();
+                        String Listarp = "";
+                        for (int i = 0; i < per; i++) {
+                            Listarp ="["+((cohetes)cohetes.get(pc)).getPersonas().indexOf(i)
+                                    +"]"+((cohetes)cohetes.get(pc)).getPersonas();
+                        }
+                        System.out.println(Listarp);
                     }
                     
                 }
@@ -78,44 +88,57 @@ public class Lab3P2_EstherHernandez {
                 int pP = lea.nextInt();
                 if (pP<= planetas.size()-1 && planetas.get(pP)instanceof Planetas) {
                     System.out.println("");
-                System.out.println("1.Agregar Lunas");
-                System.out.println("2.Elimianr lunas");
-                int op6 = lea.nextInt();
-                 while((op6 <1)||(op6>3)){
-                        System.out.println("Opcion no valida ingrese de nuevo:");
-                        op6= lea.nextInt();
+                    System.out.println("1.Agregar Lunas");
+                    System.out.println("2.Elimianr lunas");
+                    System.out.println("3.Listar Lunas");
+                    int op6 = lea.nextInt();
+                     while((op6 <1)||(op6>3)){
+                            System.out.println("Opcion no valida ingrese de nuevo:");
+                            op6= lea.nextInt();
+                        }
+
+                     if (op6 ==1) {
+                        System.out.println("Nombre de la luna:");
+                        String Nluna = lea.nextLine();Nluna = lea.next();
+                        System.out.println("Cantidad de crateres:");
+                        int ccrater= lea.nextInt();
+                        ((Planetas)planetas.get(pP)).getLunas().add(new lunas(Nluna,ccrater));
                     }
-                }
-                if (flag) {
-                    System.out.println("");
-                }
+                     if (op6 ==2) {
+                         System.out.println("Ingrese la posicion de la luna que desea eliminar:");
+                         int pl = lea.nextInt();
+                         ((Planetas)planetas.get(pP)).getLunas().remove(pl);
+                         System.out.println("Luna eliminada del sistema exitosamente");
+                    }
+                     if (op6==3) {
+                        int luna=  ((Planetas)planetas.get(pP)).getLunas().size();
+                        String ListarL = "";
+                        for (int i = 0; i < luna; i++) {
+                            ListarL +="["+((Planetas)planetas.get(pP)).getLunas().indexOf(i)
+                                    +"]"+((Planetas)planetas.get(pP)).getLunas();
+                        }
+                        System.out.println(ListarL);
+                    }
+                    }
                 
+  
                 break;
                 
             case 5:
-                System.out.println("COHETES");
-                String lcohete="";
-                for (Object object : cohetes) {
-                    if (object instanceof cohetes) {
-                        lcohete+= "["+cohetes.indexOf(object)+"]"+"- "+object+"\n";
-                    }
-                    System.out.println(lcohete);
-                    
-                }
+                imprimirC();
                 break;
             case 6:
-                 System.out.println("PLANETAS");
-                String lplaneta="";
-                for (Object object : planetas) {
-                    if (object instanceof Planetas) {
-                        lplaneta+= "["+cohetes.indexOf(object)+"]"+"- "+object+"\n";
-                    }
-                    System.out.println(lplaneta);
-                    
-                }
+                 imprimirP();
                 break;
             case 7:
-               
+                imprimirP();
+                System.out.println("Seleccione el Planeta");
+               int p = lea.nextInt();
+               planetas.get(p);
+                System.out.println("1. Un cohete");
+                System.out.println("2. Todos los cohetes");
+                int op7 = lea.nextInt();
+                
                 break;
             default:
                 System.out.println("Opcion no valida");
@@ -210,6 +233,29 @@ public class Lab3P2_EstherHernandez {
         }
         
         
+    }
+    
+    public static void imprimirP(){
+        System.out.println("PLANETAS");
+                String lplaneta="";
+                for (Object object : planetas) {
+                    if (object instanceof Planetas) {
+                        lplaneta+= "["+cohetes.indexOf(object)+"]"+"- "+object+"\n";
+                    }
+                    System.out.println(lplaneta);
+                    
+                }
+    }
+    public static void imprimirC(){
+        System.out.println("COHETES");
+                String lcohete="";
+                for (Object object : cohetes) {
+                    if (object instanceof cohetes) {
+                        lcohete+= "["+cohetes.indexOf(object)+"]"+"- "+object+"\n";
+                    }
+                    System.out.println(lcohete);
+                    
+                }
     }
 }
     
