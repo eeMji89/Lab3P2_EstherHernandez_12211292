@@ -16,11 +16,7 @@ public class Procoso extends Planetas{
     private boolean vida;
 
     public Procoso() {
-    }
-
-    public Procoso(double densidad, boolean vida) {
-        this.densidad = densidad;
-        this.vida = vida;
+        super();
     }
 
     public Procoso(double densidad, boolean vida, String nombre, double masa, double radio, int temperatura, double velocidad) {
@@ -28,7 +24,8 @@ public class Procoso extends Planetas{
         this.densidad = densidad;
         this.vida = vida;
     }
-
+    
+    
     public double getDensidad() {
         return densidad;
     }
@@ -47,7 +44,7 @@ public class Procoso extends Planetas{
 
     @Override
     public String toString() {
-        return "Procoso{" + "densidad=" + densidad + ", vida=" + vida + '}';
+        return "Procoso{" + "densidad=" + densidad + ", vida=" + vida + '}'+ super.toString();
     }
     
 

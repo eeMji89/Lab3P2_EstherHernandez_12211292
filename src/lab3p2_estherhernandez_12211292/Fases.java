@@ -16,13 +16,10 @@ public class Fases extends cohetes {
     private double altura;
 
     public Fases() {
+        super();
     }
 
-    public Fases(int cfases, int cmotores, double altura) {
-        this.cfases = cfases;
-        this.cmotores = cmotores;
-        this.altura = altura;
-    }
+   
 
     public Fases(int cfases, int cmotores, double altura, double peso, String nombre, String serie, int potencia, double velocidad) {
         super(peso, nombre, serie, potencia, velocidad);

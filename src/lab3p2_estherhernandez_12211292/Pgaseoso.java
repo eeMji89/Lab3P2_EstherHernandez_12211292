@@ -15,12 +15,10 @@ public class Pgaseoso extends Planetas{
     private int cantA;
 
     public Pgaseoso() {
+        super();
     }
-
-    public Pgaseoso(double presion, int cantA) {
-        this.presion = presion;
-        this.cantA = cantA;
-    }
+    
+    
 
     public Pgaseoso(double presion, int cantA, String nombre, double masa, double radio, int temperatura, double velocidad) {
         super(nombre, masa, radio, temperatura, velocidad);
@@ -46,7 +44,7 @@ public class Pgaseoso extends Planetas{
 
     @Override
     public String toString() {
-        return "Pgaseoso{" + "presion=" + presion + ", cantA=" + cantA + '}';
+        return "Pgaseoso{" + "presion=" + presion + ", cantA=" + cantA + '}'+super.toString();
     }
 
     

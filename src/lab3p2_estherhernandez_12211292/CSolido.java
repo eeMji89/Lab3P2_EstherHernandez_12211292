@@ -15,6 +15,7 @@ public class CSolido extends cohetes {
     private String material;
 
     public CSolido() {
+        super();
     }
 
     public CSolido(double kilos, String material) {
@@ -27,6 +28,7 @@ public class CSolido extends cohetes {
         this.kilos = kilos;
         this.material = material;
     }
+    
 
     public ArrayList<Personas> getPersonas() {
         return personas;

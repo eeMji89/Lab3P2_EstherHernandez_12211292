@@ -14,6 +14,7 @@ public class Cliquido extends cohetes {
     private double litro;
 
     public Cliquido() {
+        super();
     }
 
     public Cliquido(double litro) {
