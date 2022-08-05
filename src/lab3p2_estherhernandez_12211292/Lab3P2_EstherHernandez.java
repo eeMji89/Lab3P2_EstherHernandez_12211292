@@ -163,12 +163,22 @@ public class Lab3P2_EstherHernandez {
                     }
                     if (cont1>0) {
                         System.out.println("El cohete "+ cohetes.get(pcc).getNombre()+"Alcanzo la velocidad de" + velcohete
-                        + " y logro salir del planeta "+ planetas.get(p).getNombre());
+                        + " km/h y logro salir del planeta "+ planetas.get(p).getNombre());
+                        System.out.println("Lanzamientos exitosos: "+ cont1);
+                        System.out.println("Lamzamientos fallidos: "+ cont2);
+                    }
+                    else{
+                        System.out.println("El cohete "+ cohetes.get(pcc).getNombre()+"Alcanzo la velocidad de" + velcohete
+                        + " km/h y no logro salir del planeta "+ planetas.get(p).getNombre());
+                        System.out.println("Lanzamientos exitosos: "+ cont1);
+                        System.out.println("Lamzamientos fallidos: "+ cont2);
                     }
                     System.out.println("");
                 }
                 if (op7 ==2) {
-                    
+                    for (int i = 0; i < cohetes.size(); i++) {
+                        
+                    }
                 }
                 break;
             default:
