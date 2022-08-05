@@ -15,7 +15,9 @@ public class Lab3P2_EstherHernandez {
     public static void main(String[] args) {
         ArrayList <Procoso> planetas = new ArrayList();
         ArrayList<cohetes> cohetes= new ArrayList();
-        System.out.println("");
+        boolean flag = true;
+        while(flag == true){
+        System.out.println("0. Salir");
         System.out.println("1. Crear cohete");
         System.out.println("2. Crear planeta");
         System.out.println("3. Editar cohete");
@@ -23,8 +25,40 @@ public class Lab3P2_EstherHernandez {
         System.out.println("6. Listar planetas");
         System.out.println("7. Probar cohete");
         System.out.println("Ingrese la opcion");
-        
-        
-    }
+        int op = lea.nextInt();
+        switch (op){
+            case 0:
+                flag = false;
+                break;
+            case 1:
+                System.out.println("");
+                break;
+            case 2:
+                
+                break;
+            case 3:
+                
+                break;
+            case 4:
+                
+                break;
+            case 5:
+                
+                break;
+            case 6:
+                
+                break;
+            case 7:
+               
+                break;
+            default:
+                System.out.println("Opcion no valida");
+                break;
+                
+                
+            }
+        }
     
+    }
 }
+    

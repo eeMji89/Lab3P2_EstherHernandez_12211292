@@ -10,14 +10,47 @@ import java.util.ArrayList;
  *
  * @author ELIZABETH HERNANDEZ
  */
-public class Procoso {
-    private String nombre;
-    private double masa;
-    private double radio;
-    private int temperatura;
-    private double velocidad;
-    private ArrayList<lunas> Lunas = new ArrayList();
+public class Procoso extends Planetas{
+   
     private double densidad;
-    private 
+    private boolean vida;
+
+    public Procoso() {
+    }
+
+    public Procoso(double densidad, boolean vida) {
+        this.densidad = densidad;
+        this.vida = vida;
+    }
+
+    public Procoso(double densidad, boolean vida, String nombre, double masa, double radio, int temperatura, double velocidad) {
+        super(nombre, masa, radio, temperatura, velocidad);
+        this.densidad = densidad;
+        this.vida = vida;
+    }
+
+    public double getDensidad() {
+        return densidad;
+    }
+
+    public void setDensidad(double densidad) {
+        this.densidad = densidad;
+    }
+
+    public boolean isVida() {
+        return vida;
+    }
+
+    public void setVida(boolean vida) {
+        this.vida = vida;
+    }
+
+    @Override
+    public String toString() {
+        return "Procoso{" + "densidad=" + densidad + ", vida=" + vida + '}';
+    }
+    
+
+    
     
 }

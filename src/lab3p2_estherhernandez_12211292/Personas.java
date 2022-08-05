@@ -8,37 +8,47 @@ package lab3p2_estherhernandez_12211292;
  *
  * @author ELIZABETH HERNANDEZ
  */
-public class lunas {
+public class Personas {
     private String nombre;
-    private int cantC;
+    private int edad;
+    private double peso;
 
-    public lunas() {
+    public Personas() {
     }
 
-    public lunas(String nombre, int cantC) {
+    public Personas(String nombre, int edad, double peso) {
         this.nombre = nombre;
-        this.cantC = cantC;
+        this.edad = edad;
+        this.peso = peso;
     }
 
     public String getNombre() {
         return nombre;
     }
 
-    public int getCantC() {
-        return cantC;
+    public int getEdad() {
+        return edad;
+    }
+
+    public double getPeso() {
+        return peso;
     }
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
-    public void setCantC(int cantC) {
-        this.cantC = cantC;
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+    public void setPeso(double peso) {
+        this.peso = peso;
     }
 
     @Override
     public String toString() {
-        return "lunas{" + "nombre=" + nombre + ", cantC=" + cantC + '}';
+        return "Personas{" + "nombre=" + nombre + ", edad=" + edad + ", peso=" + peso + '}';
     }
     
 }
