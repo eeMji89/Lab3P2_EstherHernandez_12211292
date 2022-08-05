@@ -7,8 +7,10 @@ package lab3p2_estherhernandez_12211292;
  */
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.Random;
 public class Lab3P2_EstherHernandez {
     static Scanner lea = new Scanner(System.in);
+    static Random rd = new Random();
     /**
      * @param args the command line arguments
      */
@@ -134,11 +136,40 @@ public class Lab3P2_EstherHernandez {
                 imprimirP();
                 System.out.println("Seleccione el Planeta");
                int p = lea.nextInt();
-               planetas.get(p);
+               Double mass = planetas.get(p).getMasa();
+               Double radio=  planetas.get(p).getMasa();
+               double g = 6.67 * (Math.pow(10, -1));
+               double velocidadE = Math.sqrt((2*g*mass)/2);
+               planetas.get(p).setVelocidad(velocidadE);
                 System.out.println("1. Un cohete");
                 System.out.println("2. Todos los cohetes");
                 int op7 = lea.nextInt();
-                
+                if (op7 == 1) {
+                    imprimirC();
+                    System.out.println("Seleccione el cohete ");
+                    int pcc = lea.nextInt();
+                    cohetes.get(pcc);
+                    int potencia = cohetes.get(pcc).getPotencia();
+                    double Nr = 5000+ rd.nextInt(20000);
+                    Double velcohete = potencia * Nr ;
+                    int cont1 = 0;
+                    int cont2 = 0;
+                    if (velcohete < velocidadE) {
+                        cont2 =cont2 +1;
+                      
+                    }
+                    else {
+                        cont1 = cont1 +1;
+                    }
+                    if (cont1>0) {
+                        System.out.println("El cohete "+ cohetes.get(pcc).getNombre()+"Alcanzo la velocidad de" + velcohete
+                        + " y logro salir del planeta "+ planetas.get(p).getNombre());
+                    }
+                    System.out.println("");
+                }
+                if (op7 ==2) {
+                    
+                }
                 break;
             default:
                 System.out.println("Opcion no valida");
