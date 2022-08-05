@@ -144,6 +144,8 @@ public class Lab3P2_EstherHernandez {
                 System.out.println("1. Un cohete");
                 System.out.println("2. Todos los cohetes");
                 int op7 = lea.nextInt();
+                int cont1 = 0;
+                int cont2 = 0;
                 if (op7 == 1) {
                     imprimirC();
                     System.out.println("Seleccione el cohete ");
@@ -152,8 +154,8 @@ public class Lab3P2_EstherHernandez {
                     int potencia = cohetes.get(pcc).getPotencia();
                     double Nr = 5000+ rd.nextInt(20000);
                     Double velcohete = potencia * Nr ;
-                    int cont1 = 0;
-                    int cont2 = 0;
+                    cont1 = 0;
+                    cont2 = 0;
                     if (velcohete < velocidadE) {
                         cont2 =cont2 +1;
                       
@@ -177,7 +179,28 @@ public class Lab3P2_EstherHernandez {
                 }
                 if (op7 ==2) {
                     for (int i = 0; i < cohetes.size(); i++) {
-                        
+                    int potencia = cohetes.get(i).getPotencia();
+                    double Nr = 5000+ rd.nextInt(20000);
+                    Double velcohete = potencia * Nr ;
+                    
+                    if (velcohete < velocidadE) {
+                        cont2 =cont2 +1; 
+                    }
+                    else {
+                        cont1 = cont1 +1;
+                    }
+                    if (cont1>0) {
+                        System.out.println("El cohete "+ cohetes.get(i).getNombre()+"Alcanzo la velocidad de" + velcohete
+                        + " km/h y logro salir del planeta "+ planetas.get(p).getNombre());
+                        System.out.println("Lanzamientos exitosos: "+ cont1);
+                        System.out.println("Lamzamientos fallidos: "+ cont2);
+                    }
+                    else{
+                        System.out.println("El cohete "+ cohetes.get(i).getNombre()+"Alcanzo la velocidad de" + velcohete
+                        + " km/h y no logro salir del planeta "+ planetas.get(p).getNombre());
+                        System.out.println("Lanzamientos exitosos: "+ cont1);
+                        System.out.println("Lamzamientos fallidos: "+ cont2);
+                    }
                     }
                 }
                 break;
