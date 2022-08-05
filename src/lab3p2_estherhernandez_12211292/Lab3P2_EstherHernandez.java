@@ -42,11 +42,31 @@ public class Lab3P2_EstherHernandez {
                 System.out.println("Ingrese la posicion del cohete que desea editar:");
                 int pc = lea.nextInt();
                 if (pc<= cohetes.size()-1 && cohetes.get(pc)instanceof cohetes) {
-                    System.out.println("1.Regresar");
-                    System.out.println("2.Agregar personas");
-                    System.out.println("3.Eliminar personas");
+                    System.out.println("");
+                    System.out.println("1.Agregar personas");
+                    System.out.println("2.Eliminar personas");
                     int op5= lea.nextInt();
-                
+                    while((op5 <1)||(op5>3)){
+                        System.out.println("Opcion no valida ingrese de nuevo:");
+                        op5= lea.nextInt();
+                    }
+                    if (op5 == 1) {
+                        System.out.println("Nombre de la persona:");
+                        String np = lea.nextLine(); np = lea.next();
+                        System.out.println("Edad: ");
+                        int edad = lea.nextInt();
+                        System.out.println("Peso");
+                        double peso = lea.nextDouble();
+                        ((cohetes)cohetes.get(pc)).getPersonas().add(new Personas(np,edad,peso));
+                        System.out.println("Persona agregada exitosamente");
+                    }
+                    if (op5 ==2) {
+                        System.out.println("Ingrese la posicion de la persona que desea eliminar:");
+                        int pper = lea.nextInt();
+                        ((cohetes)cohetes.get(pc)).getPersonas().remove(pper);
+                        System.out.println("Persona eliminada exitosamente");
+                    }
+                    
                 }
                 else{
                     System.out.println("Posicion no valida");
@@ -57,10 +77,17 @@ public class Lab3P2_EstherHernandez {
                 System.out.println("Ingrese la posicion del cohete que desea editar:");
                 int pP = lea.nextInt();
                 if (pP<= planetas.size()-1 && planetas.get(pP)instanceof Planetas) {
-                    System.out.println("1.Regresar");
-                System.out.println("2.Agregar Lunas");
-                System.out.println("3.Elimianr lunas");
+                    System.out.println("");
+                System.out.println("1.Agregar Lunas");
+                System.out.println("2.Elimianr lunas");
                 int op6 = lea.nextInt();
+                 while((op6 <1)||(op6>3)){
+                        System.out.println("Opcion no valida ingrese de nuevo:");
+                        op6= lea.nextInt();
+                    }
+                }
+                if (flag) {
+                    System.out.println("");
                 }
                 
                 break;
@@ -121,6 +148,7 @@ public class Lab3P2_EstherHernandez {
         op2 = lea.nextInt();
         while((op2 <1)||(op2>3)){
             System.out.println("Opcion no valida ingrese de nuevo.");
+            op2= lea.nextInt();
         }
             if (op2 ==1) {
                 System.out.println("Litros de gasolina:");
