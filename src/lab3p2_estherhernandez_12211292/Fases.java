@@ -62,7 +62,7 @@ public class Fases extends cohetes {
 
     @Override
     public String toString() {
-        return "Fases{" + "cfases=" + cfases + ", cmotores=" + cmotores + ", altura=" + altura + '}';
+        return "Cohete de fases{" + "cfases=" + cfases + ", cmotores=" + cmotores + ", altura=" + altura + '}'+super.toString();
     }
 
   

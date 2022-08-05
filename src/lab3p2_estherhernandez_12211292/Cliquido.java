@@ -44,7 +44,7 @@ public class Cliquido extends cohetes {
 
     @Override
     public String toString() {
-        return "Cliquido{" + "litro=" + litro + '}';
+        return "Cohete de combustible liquido{" + "litro=" + litro + '}'+ super.toString();
     }
 
     

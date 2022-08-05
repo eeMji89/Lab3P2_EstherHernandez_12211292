@@ -13,13 +13,13 @@ import java.util.ArrayList;
 public class Procoso extends Planetas{
    
     private double densidad;
-    private boolean vida;
+    private String vida;
 
     public Procoso() {
         super();
     }
 
-    public Procoso(double densidad, boolean vida, String nombre, double masa, double radio, int temperatura, double velocidad) {
+    public Procoso(double densidad, String vida, String nombre, double masa, double radio, int temperatura, double velocidad) {
         super(nombre, masa, radio, temperatura, velocidad);
         this.densidad = densidad;
         this.vida = vida;
@@ -34,17 +34,17 @@ public class Procoso extends Planetas{
         this.densidad = densidad;
     }
 
-    public boolean isVida() {
+    public String isVida() {
         return vida;
     }
 
-    public void setVida(boolean vida) {
+    public void setVida(String vida) {
         this.vida = vida;
     }
 
     @Override
     public String toString() {
-        return "Procoso{" + "densidad=" + densidad + ", vida=" + vida + '}'+ super.toString();
+        return "Planeta rocoso{" + "densidad=" + densidad + ", vida=" + vida + '}'+ super.toString();
     }
     
 

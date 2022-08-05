@@ -58,7 +58,7 @@ public class CSolido extends cohetes {
 
     @Override
     public String toString() {
-        return "Combustible Solido{" + "kilos=" + kilos + ", material=" + material + '}';
+        return "Cohete de Combustible Solido{" + "kilos=" + kilos + ", material=" + material + '}'+super.toString();
     }
     
 }
