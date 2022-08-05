@@ -39,17 +39,30 @@ public class Lab3P2_EstherHernandez {
                 crearplaneta();
                 break;
             case 3:
-                System.out.println("1.Regresar");
-                System.out.println("2.Agregar personas");
-                System.out.println("3.Eliminar personas");
+                System.out.println("Ingrese la posicion del cohete que desea editar:");
+                int pc = lea.nextInt();
+                if (pc<= cohetes.size()-1 && cohetes.get(pc)instanceof cohetes) {
+                    System.out.println("1.Regresar");
+                    System.out.println("2.Agregar personas");
+                    System.out.println("3.Eliminar personas");
+                    int op5= lea.nextInt();
                 
-                int op5= lea.nextInt();
+                }
+                else{
+                    System.out.println("Posicion no valida");
+                }
+                
                 break;
             case 4:
-                System.out.println("1.Regresar");
+                System.out.println("Ingrese la posicion del cohete que desea editar:");
+                int pP = lea.nextInt();
+                if (pP<= planetas.size()-1 && planetas.get(pP)instanceof Planetas) {
+                    System.out.println("1.Regresar");
                 System.out.println("2.Agregar Lunas");
                 System.out.println("3.Elimianr lunas");
                 int op6 = lea.nextInt();
+                }
+                
                 break;
                 
             case 5:
@@ -57,14 +70,22 @@ public class Lab3P2_EstherHernandez {
                 String lcohete="";
                 for (Object object : cohetes) {
                     if (object instanceof cohetes) {
-                        lcohete+= cohetes.indexOf(object)+"- "+object+"\n";
+                        lcohete+= "["+cohetes.indexOf(object)+"]"+"- "+object+"\n";
                     }
                     System.out.println(lcohete);
                     
                 }
                 break;
             case 6:
-                
+                 System.out.println("PLANETAS");
+                String lplaneta="";
+                for (Object object : planetas) {
+                    if (object instanceof Planetas) {
+                        lplaneta+= "["+cohetes.indexOf(object)+"]"+"- "+object+"\n";
+                    }
+                    System.out.println(lplaneta);
+                    
+                }
                 break;
             case 7:
                
